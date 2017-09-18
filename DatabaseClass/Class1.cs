@@ -21,10 +21,11 @@ namespace DatabaseClass
 
         public static SqlConnection CreateConnection()
         {
-            //strConnection = "server=localhost;database=cms;Trusted_Connection=yes";
-            strConnection = "Data Source=mssql6.gear.host;Persist Security Info=True;User ID=randomdb;Password=Notbeefsteak1!";
+            strConnection = "server=localhost;database=randomdb;Trusted_Connection=yes";
+            //strConnection = "Data Source=mssql6.gear.host;Persist Security Info=True;User ID=randomdb;Password=Notbeefsteak1!";
             objConnection = new SqlConnection(strConnection);
             objConnection.Open();
+			MessageBox.Show("Open");
             return objConnection;
         }
 
